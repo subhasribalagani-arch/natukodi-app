@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Natukodi Online Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header / Hero -->
+  <header class="hero">
+    <div class="hero-top">
+      <h1>Natukodi Online Store</h1>
+      <!-- Navigation Menu -->
+      <nav class="nav-menu">
+        <a href="#about">About</a>
+        <a href="#products">Buy</a>
+        <a href="#eggs">Eggs</a>
+        <a href="#contact">Contact</a>
+        <a href="#other">Other</a>
+        <a href="#payment">Payment</a>
+      </nav>
+      <button id="cartBtn">View Cart (<span id="cartCount">0</span>)</button>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <h2>Fresh Natukodi & Farm Eggs</h2>
+        <p>Order fresh country chicken and eggs online!</p>
+      </div>
+      <div class="hero-image">
+        <img src="https://5.imimg.com/data5/ANDROID/Default/2021/12/KI/TC/JL/39161046/product-jpeg-500x500.jpg" alt="Natukodi">
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2>About Natukodi</h2>
+    <p>Our Natukodi is farm-fresh, free-range, and healthy for your family. Raised naturally with care.</p>
+  </section>
+
+  <!-- Natukodi Product Section -->
+  <section id="products" class="products">
+    <article class="product-card">
+      <img src="https://5.imimg.com/data5/ANDROID/Default/2021/12/KI/TC/JL/39161046/product-jpeg-500x500.jpg" alt="Natukodi">
+      <h2>Natukodi (Country Chicken)</h2>
+      <p>Price: ₹250</p>
+      <label>Quantity: <input type="number" id="qty-1" min="1" value="1"></label>
+      <button onclick="addToCart(1)">Add to Cart</button>
+    </article>
+  </section>
+
+  <!-- Eggs Section -->
+  <section id="eggs" class="section">
+    <h2>Fresh Eggs</h2>
+    <div class="eggs-product">
+      <img src="https://tse1.explicit.bing.net/th/id/OIP.7g3VODCs9OqLBvEfmx97ugHaE7?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Eggs">
+      <p>Eggs (12 pcs) - ₹60</p>
+      <label>Quantity: <input type="number" id="qty-2" min="1" value="1"></label>
+      <button onclick="addToCart(2)">Add to Cart</button>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>Email: info@natukodi.com | Phone: +91 12345 67890</p>
+  </section>
+
+  <!-- Other Section -->
+  <section id="other" class="section">
+    <h2>Other Info</h2>
+    <p>Check our latest offers and farm updates here.</p>
+  </section>
+
+  <!-- Cart Sidebar -->
+  <aside class="cart hidden">
+    <h2>Your Cart</h2>
+    <div id="cartItems"></div>
+    <h3>Total: ₹<span id="totalAmount">0</span></h3>
+    <button id="checkoutBtn">Checkout</button>
+  </aside>
+
+  <!-- Payment Section -->
+  <section id="payment" class="section">
+    <h2>Payment Details</h2>
+    <form id="paymentForm">
+      <label>
+        Full Name:<br>
+        <input type="text" id="name" required>
+      </label><br><br>
+
+      <label>
+        Email:<br>
+        <input type="email" id="email" required>
+      </label><br><br>
+
+      <label>
+        Address:<br>
+        <textarea id="address" rows="3" required></textarea>
+      </label><br><br>
+
+      <label>
+        Payment Method:<br>
+        <select id="paymentMethod" required>
+          <option value="">Select</option>
+          <option value="card">Card</option>
+          <option value="upi">UPI</option>
+          <option value="cod">Cash on Delivery</option>
+        </select>
+      </label><br><br>
+
+      <div id="cardDetails" style="display:none;">
+        <label>
+          Card Number:<br>
+          <input type="text" id="cardNumber" maxlength="16">
+        </label><br><br>
+
+        <label>
+          Expiry Date:<br>
+          <input type="month" id="expiryDate">
+        </label><br><br>
+
+        <label>
+          CVV:<br>
+          <input type="password" id="cvv" maxlength="3">
+        </label><br><br>
+      </div>
+
+      <button type="submit">Pay ₹<span id="payAmount">0</span></button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
