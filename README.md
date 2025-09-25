@@ -18,9 +18,9 @@ Usage
 
 Screenshots
 
-Contributing
+https://github.com/subhasribalagani-arch/natukodi-app/blob/61eedb6fa048407546c63eb5a979d195a03cd69d/Screenshot_25-9-2025_135029_127.0.0.1.jpeg
 
-License
+Contributing
 
 About the Project
 
